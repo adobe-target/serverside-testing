@@ -1,0 +1,5 @@
+{
+    "host" : "localhost:5001",
+    "client": "demo",
+    "secure": false
+}

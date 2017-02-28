@@ -1,0 +1,6 @@
+npm-debug.log
+.DS_Store
+/*.env
+*.iml
+.idea
+node_modules
