@@ -13,7 +13,10 @@
     "React",
     "Server to Server"
   ],
-  "author": "ciocanu@adobe.com",
+  "author": {
+    "name": "Adobe Target",
+    "email": "ciocanu@adobe.com"
+  },
   "license": "MIT",
   "engines": {
     "node": "6.2.2"
@@ -30,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.corp.adobe.com/ciocanu/target-node-client-react-app.git"
+    "url": "https://github.com/adobe-target/serverside-testing.git"
   }
 }
