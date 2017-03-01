@@ -1,5 +1,4 @@
 {
-    "host" : "localhost:5001",
-    "client": "demo",
-    "secure": false
+    "client": "adobeinternalags421",
+    "secure": true
 }

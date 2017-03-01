@@ -15,11 +15,12 @@ const targetClient = createTargetClient({
 const App = React.createFactory(require("../components/app.jsx"));
 
 function getMboxContent(data) {
+  console.log('Request Data --- ', data);
   return targetClient.execute(data)
     .then(response => {
       const result = {};
 
-      console.log('Success', response);
+      console.log('Response from Target ---', response);
 
       result[data.mbox] = response.content;
 
@@ -36,6 +37,7 @@ function collectResponses(responses) {
   const result = {};
 
   responses.forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
+  console.log('result  ---', result);
 
   return result;
 }

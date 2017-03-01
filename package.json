@@ -28,7 +28,7 @@
     "@adobe/target-node-client": "^0.8.0"
   },
   "devDependencies": {
-    "babel-preset-react": "^6.11.1",
+    "babel-preset-react": "^6.23.0",
     "babel-register": "^6.14.0"
   },
   "repository": {
