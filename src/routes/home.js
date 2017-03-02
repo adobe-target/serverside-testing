@@ -3,16 +3,25 @@ require("babel-register")({
 });
 
 const CONFIG = require('../../config.json');
+const CLIENT = CONFIG.client;
+const HOST = CONFIG.host;
+const SECURE = CONFIG.secure;
+const IMS_ORG_ID = CONFIG.imsOrgId;
+
+const Cookies = require("cookies");
 const React = require("react");
-const ReactDOMServer = require("react-dom/server");
-const createTargetClient = require("@adobe/target-node-client");
-const targetClient = createTargetClient({
-  client: CONFIG.client,
-  host: CONFIG.host,
-  secure: CONFIG.secure
+const ReactServer = require("react-dom/server");
+const Visitor = require("@adobe-mcid/visitor-js-server");
+const TargetClientFactory = require("@adobe/target-node-client");
+const App = React.createFactory(require("../components/app.jsx"));
+
+const targetClient = TargetClientFactory({
+  client: CLIENT,
+  host: HOST,
+  secure: SECURE
 });
 
-const App = React.createFactory(require("../components/app.jsx"));
+const AuthState = Visitor.AuthState;
 
 function getMboxContent(data) {
   return targetClient.execute(data)
@@ -35,7 +44,8 @@ function getMboxContent(data) {
 function collectResponses(responses) {
   const result = {};
 
-  responses.forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
+  responses.filter(res => res !== null)
+    .forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
 
   return result;
 }
@@ -44,8 +54,10 @@ function executeMboxRequests(...requests) {
   return Promise.all(requests).then(collectResponses);
 }
 
-function renderPage(customizations) {
-  return ReactDOMServer.renderToString(React.createElement(App, {customizations}));
+function renderPage(visitor, customizations) {
+  const visitorState = visitor.getState();
+
+  return ReactServer.renderToString(React.createElement(App, {visitorState, customizations}));
 }
 
 function sendResponse(res, content) {
@@ -58,18 +70,29 @@ function sendResponse(res, content) {
 }
 
 module.exports = (req, res) => {
-  const data = {mbox: "hero-banner"};
+  const mbox = "hero-banner";
+  const visitor = new Visitor(IMS_ORG_ID);
+  const cookies = new Cookies(req, res);
+  const amcvCookie = cookies.get(encodeURIComponent(visitor.getCookieName()));
+  const visitorPayload = visitor.generatePayload({
+    sdidConsumerID: mbox,
+    amcvCookie: amcvCookie
+  });
+
+  const data = Object.assign({}, { mbox }, visitorPayload);
   const promise = executeMboxRequests(getMboxContent(data));
 
+  console.log('Data sent to Target', data);
+
   promise.then(customizations => {
-    const html = renderPage(customizations);
+    const html = renderPage(visitor, customizations);
 
     sendResponse(res, html);
   })
   .catch(error => {
     console.log('Error', error);
 
-    const html = renderPage(null);
+    const html = renderPage(visitor, null);
 
     sendResponse(res, html);
   });
