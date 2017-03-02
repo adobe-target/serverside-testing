@@ -1,4 +1,6 @@
 {
+    "host" : "adobe.tt.omtrdc.net",
     "client": "adobeinternalags421",
-    "secure": true
+    "secure": true,
+    "imsOrgId" : "A2E3847157207A807F000101@AdobeOrg"
 }

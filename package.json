@@ -25,7 +25,8 @@
     "express": "^4.14.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "@adobe/target-node-client": "^0.8.0"
+    "@adobe/target-node-client": "^0.8.0",
+    "@adobe-mcid/visitor-js-server": "*"
   },
   "devDependencies": {
     "babel-preset-react": "^6.23.0",
