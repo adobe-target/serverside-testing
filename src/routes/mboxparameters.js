@@ -12,10 +12,9 @@ const targetClient = createTargetClient({
   secure: CONFIG.secure
 });
 
-const App = React.createFactory(require("../components/app.jsx"));
+const MboxParameters = React.createFactory(require("../components/examples/mboxparameters.jsx"));
 
 function getMboxContent(data) {
-  console.log('Request Data --- ', data);
   return targetClient.execute(data)
     .then(response => {
       const result = {};
@@ -37,7 +36,6 @@ function collectResponses(responses) {
   const result = {};
 
   responses.forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
-  console.log('result  ---', result);
 
   return result;
 }
@@ -47,7 +45,7 @@ function executeMboxRequests(...requests) {
 }
 
 function renderPage(customizations) {
-  return ReactDOMServer.renderToString(React.createElement(App, {customizations}));
+  return ReactDOMServer.renderToString(React.createElement(MboxParameters, {customizations}));
 }
 
 function sendResponse(res, content) {
@@ -60,7 +58,14 @@ function sendResponse(res, content) {
 }
 
 module.exports = (req, res) => {
-  const data = {mbox: "hero-banner"};
+  const data = {
+    mbox: "hero-banner", 
+    tntId: "123456-a",
+    mboxParameters : {
+      "store" : "FR",
+      "browserWidth" : "600"
+    }
+  };
   const promise = executeMboxRequests(getMboxContent(data));
 
   promise.then(customizations => {
