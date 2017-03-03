@@ -17,6 +17,9 @@ const Head = ({ visitorState }) => {
       <script dangerouslySetInnerHTML={{__html: `
          var visitor = Visitor.getInstance('${IMS_ORG_ID}', {serverState: ${visitorStateStr}});
       `}} />
+
+      <script src="js/AppMeasurement.js" />
+      <script src="js/AppMeasurement-init.js" />
     </head>
   );
 };

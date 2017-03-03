@@ -1,6 +1,9 @@
 {
-    "host" : "adobe.tt.omtrdc.net",
+    "host" : "adobeinternalags421.tt.omtrdc.net",
     "client": "adobeinternalags421",
     "secure": true,
-    "imsOrgId" : "A2E3847157207A807F000101@AdobeOrg"
+    "imsOrgId" : "A2E3847157207A807F000101@AdobeOrg",
+    "reportSuiteId": "<unknown>",
+    "trackingServer": "<unknown>",
+    "trackingServerSecure": "<unknown>"
 }

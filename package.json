@@ -4,8 +4,9 @@
   "description": "Adobe Target Node Client React App",
   "main": "index.js",
   "scripts": {
-    "www": "node index.js",
-    "mock": "node mock.js"
+    "prepare-analytics": "node tools/prepare-analytics",
+    "www": "npm run prepare-analytics && node index.js",
+    "mock": "node tools/mock.js"
   },
   "keywords": [
     "Adobe",
