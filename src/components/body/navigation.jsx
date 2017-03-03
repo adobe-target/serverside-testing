@@ -15,14 +15,14 @@ const Navigation = () => {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
              <ul className="nav navbar-nav navbar-right">
-                <li><a href="/ab">AB</a></li>
-                <li><a href="/xt">XT</a></li>
-                <li><a href="/mbox-parameters">Mbox Parameters</a></li>
-                <li><a href="/profile-parameters">Profile Parameters</a></li>
-                <li><a href="/json-offer">JSON Offer</a></li>
-                <li><a href="/third-party-id">Third Party Id</a></li>
-                <li><a href="/customer-attributes">Customer Attributes</a></li>
-                <li><a href="/recommendations">Recommendations</a></li>
+                <li className="ab"><a href="/ab">AB</a></li>
+                <li className="xt"><a href="/xt">XT</a></li>
+                <li className="mbox-parameters"><a href="/mbox-parameters">Mbox Parameters</a></li>
+                <li className="profile-parameters"><a href="/profile-parameters">Profile Parameters</a></li>
+                <li className="json-offer"><a href="/json-offer">JSON Offer</a></li>
+                <li className="third-party-id"><a href="/third-party-id">Third Party Id</a></li>
+                <li className="customer-attributes"><a href="/customer-attributes">Customer Attributes</a></li>
+                <li className="recommendations"><a href="/recommendations">Recommendations</a></li>
             </ul>
           </div>
         </div>
