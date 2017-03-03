@@ -3,7 +3,7 @@ const server = http.createServer(handleRequest);
 const PORT = 5001;
 
 function getData() {
-  return {content: "<img src=\"http://www.hdwallpapersfreedownload.com/uploads/large/super-heroes/bumblebee-transformers-wallpaper-hd-free.jpg\"/>"}
+  return {content: "<img src=\"https://dummyimage.com/940x400/fff/000.png&text=Image+from+mock+server\"/>"}
 }
 
 function handleRequest(request, response){

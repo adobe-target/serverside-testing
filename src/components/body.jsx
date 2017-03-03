@@ -1,24 +1,20 @@
 const React = require("react");
 const Navigation = React.createFactory(require("./body/navigation.jsx"));
 const Main = React.createFactory(require("./body/main.jsx"));
-const Footer = React.createFactory(require("./body/footer.jsx"));
 
 const Body = ({customizations}) => {
-  const addHrefs = `$("a").attr("href", "javascript:window.open(this.location,'_self')")`;
 
   return (
     <body>
-      <div id="container">
+      <div className="container">
         <Navigation/>
-
-        <Main customizations={customizations}/>
-
-        <br class="clear"/>
-
-        <Footer/>
+        <div className="jumbotron">
+          <h1>Server side rendering</h1>
+          <Main customizations={customizations}/>
+        </div>
+        <br className="clear"/>
       </div>
 
-      <script dangerouslySetInnerHTML={{__html: addHrefs}} />
     </body>
   );
 };

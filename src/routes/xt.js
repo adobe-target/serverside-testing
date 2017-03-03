@@ -21,14 +21,14 @@ const targetClient = TargetClientFactory({
   secure: SECURE
 });
 
-const AuthState = Visitor.AuthState;
+const Xt = React.createFactory(require("../components/examples/xt.jsx"));
 
 function getMboxContent(data) {
   return targetClient.execute(data)
     .then(response => {
       const result = {};
 
-      console.log('Success', response);
+      console.log('Response from Target ---', response);
 
       result[data.mbox] = response.content;
 
@@ -44,8 +44,7 @@ function getMboxContent(data) {
 function collectResponses(responses) {
   const result = {};
 
-  responses.filter(res => res !== null)
-    .forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
+  responses.forEach(res => Object.keys(res).forEach(key => result[key] = res[key]));
 
   return result;
 }
@@ -70,6 +69,14 @@ function sendResponse(res, content) {
 }
 
 module.exports = (req, res) => {
+  const data = {
+    mbox: "hero-banner", 
+    tntId: "123456-a",
+    mboxParameters : {
+      "store" : "FR",
+      "browserWidth" : "600"
+    }
+  };
   const mbox = "hero-banner";
   const visitor = new Visitor(IMS_ORG_ID);
   const cookies = new Cookies(req, res);
@@ -81,8 +88,6 @@ module.exports = (req, res) => {
 
   const data = Object.assign({}, { mbox }, visitorPayload);
   const promise = executeMboxRequests(getMboxContent(data));
-
-  console.log('Data sent to Target', data);
 
   promise.then(customizations => {
     const html = renderPage(visitor, customizations);
