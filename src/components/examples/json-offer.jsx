@@ -2,13 +2,13 @@ const React = require("react");
 const Head = React.createFactory(require("../head.jsx"));
 const Body = React.createFactory(require("../body.jsx"));
 
-const Xt = ({customizations}) => {
+const JsonOffer = ({visitorState, customization}) => {
   return (
     <html>
-        <Head/>
-        <Body customizations={customizations}/>
+      <Head visitorState={visitorState}/>
+      <Body customization={customization}/>
     </html>
   );
 };
 
-module.exports = Xt;
+module.exports = JsonOffer;

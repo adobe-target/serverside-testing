@@ -7,22 +7,22 @@ const Navigation = () => {
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="icon-bar"/>
+              <span className="icon-bar"/>
+              <span className="icon-bar"/>
             </button>
             <a className="navbar-brand" href="#">Adobe Target</a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
              <ul className="nav navbar-nav navbar-right">
-                <li className="active"><a href="./ab">AB <span className="sr-only">(current)</span></a></li>
+                <li><a href="/ab">AB</a></li>
                 <li><a href="/xt">XT</a></li>
-                <li><a href="/mboxparameters">Mbox Parameters</a></li>
-                <li><a href="/profileparameters">Profile Parameters</a></li>
-                <li><a href="/jsonoffer">JSON Offer</a></li>
-                <li><a href="/thirdpartyid">thirdPartyId</a></li>
-                <li><a href="/customerattributes">Customer Attributes</a></li>
-                <li><a href="/recommedations">Recommendations</a></li>
+                <li><a href="/mbox-parameters">Mbox Parameters</a></li>
+                <li><a href="/profile-parameters">Profile Parameters</a></li>
+                <li><a href="/json-offer">JSON Offer</a></li>
+                <li><a href="/third-party-id">Third Party Id</a></li>
+                <li><a href="/customer-attributes">Customer Attributes</a></li>
+                <li><a href="/recommendations">Recommendations</a></li>
             </ul>
           </div>
         </div>

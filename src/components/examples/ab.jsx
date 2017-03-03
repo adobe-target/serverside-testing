@@ -2,12 +2,11 @@ const React = require("react");
 const Head = React.createFactory(require("../head.jsx"));
 const Body = React.createFactory(require("../body.jsx"));
 
-const Ab = ({visitorState, customizations}) => {
+const Ab = ({visitorState, customization}) => {
   return (
     <html>
-        <Head/>
-		<Head visitorState={visitorState}/>
-        <Body customizations={customizations}/>
+      <Head visitorState={visitorState}/>
+      <Body customization={customization}/>
     </html>
   );
 };

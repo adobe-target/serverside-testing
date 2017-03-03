@@ -1,4 +1,4 @@
-const Component = require("../components/catalog").XT;
+const Component = require("../components/catalog").CUSTOMER_ATTRIBUTES;
 const render = require("../services/rendering-service");
 
 module.exports = (req, res) => {

@@ -8,7 +8,7 @@ body {
 }
 
 
-div#hero { float: none; width: 940px; height: 370px;}
+div#hero { padding-top: 10px; float: none; width: 940px; height: 370px;}
 div#hero img{ margin:0; margin-top: -23px; position: relative; top: 0px; left: 0px; }
 div#hero header { position: relative;  left: 303px; top: -325px; width: 610px; padding: 15px; background-color: #FFF; opacity: .9; -ms-filter: "progid:dximagetransform.microsoft.alpha(opacity=90)"  }
 div#hero header h1 { text-align: left; font-size: 22px; line-height: 22px; font-weight: 100; color: #333; margin-bottom: 5px; padding: 8px 0 0 8px; }
@@ -16,4 +16,3 @@ div#hero header h2 { font-size: 36px; line-height: 36px; font-weight: 100; color
 div#hero header h2 sup { font-size: 24px; line-height: 32px; vertical-align: top; }
 div#hero header h3 { font-size: 20px; line-height: 22px; font-weight: 100; color: #333; margin-bottom: 15px; padding-left: 8px; }
 div#hero header h4 { font-size: 14px; line-height: 22px; font-weight: 100; color: #333; padding-left: 16px; }
-
