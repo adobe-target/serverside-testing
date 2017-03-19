@@ -3,7 +3,7 @@ var s_account="<unknown>"
 var s=s_gi(s_account)
 
 /******** VISITOR ID SERVICE CONFIG - REQUIRES VisitorAPI.js ********/
-s.visitor=Visitor.getInstance("A2E3847157207A807F000101@AdobeOrg")
+s.visitor=Visitor.getInstance("B8A054D958807F770A495DD6@AdobeOrg")
 
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */

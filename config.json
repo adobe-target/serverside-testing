@@ -1,8 +1,8 @@
 {
-    "host" : "adobeinternalags421.tt.omtrdc.net",
-    "client": "adobeinternalags421",
+    "host" : "adobetargetmobile.tt.omtrdc.net",
+    "client": "adobetargetmobile",
     "secure": true,
-    "imsOrgId" : "A2E3847157207A807F000101@AdobeOrg",
+    "imsOrgId" : "B8A054D958807F770A495DD6@AdobeOrg",
     "reportSuiteId": "<unknown>",
     "trackingServer": "<unknown>",
     "trackingServerSecure": "<unknown>"

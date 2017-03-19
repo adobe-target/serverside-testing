@@ -13,8 +13,6 @@ function getVisitorData(mbox, req, res) {
   });
 
   const state = visitor.getState();
-
-
   return {payload, state};
 }
 
