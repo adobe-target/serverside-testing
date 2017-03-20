@@ -4,7 +4,6 @@ const Hero = React.createFactory(require("./hero.jsx"));
 const Main = ({customization}) => {
   return (
     <div id="main">
-
       <Hero customization={customization}/>
     </div>
   );
