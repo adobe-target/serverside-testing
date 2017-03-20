@@ -11,8 +11,7 @@ const Body = ({customization}) => {
         <Navigation/>
 
         <div className="jumbotron">
-          <h1>Server side rendering</h1>
-
+          <h4>This page was rendered on the server</h4>
           <Main customization={customization}/>
 
         </div>

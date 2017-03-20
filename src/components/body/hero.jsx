@@ -1,8 +1,8 @@
 const React = require("react");
-const HERO_BANNER_MBOX = "hero-banner";
+const AB_ACTIVITY = "a1-serverside-ab";
 
 const Hero = ({customization}) => {
-  const hero = customization && customization[HERO_BANNER_MBOX];
+  const hero = customization && customization[AB_ACTIVITY];
   const img = hero ? hero : `<img src="https://dummyimage.com/940x350/fff/000.png&text=Default-Content"/>`;
 
   return (

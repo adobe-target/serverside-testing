@@ -3,7 +3,7 @@ const render = require("../services/rendering-service");
 
 module.exports = (req, res) => {
   const payload = {
-    mbox: "hero-banner",
+    mbox: "a1-serverside-xt",
     tntId: "123456-a",
     thirdPartyId: "abcde",
     mboxParameters : {
