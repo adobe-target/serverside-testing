@@ -3,7 +3,7 @@ const AB_ACTIVITY = "a1-serverside-ab";
 
 const Hero = ({customization}) => {
   const hero = customization && customization[AB_ACTIVITY];
-  const img = hero ? hero : `<img src="https://dummyimage.com/940x350/fff/000.png&text=Default-Content"/>`;
+  const img = hero ? hero : `<h3>You received the default content. Your activity is either inactive or you didn't qualify for any of the active experiences.</h3>`;
 
   return (
     <div id="hero">
