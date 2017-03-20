@@ -1,5 +1,5 @@
 const React = require("react");
-const AB_ACTIVITY = "a1-serverside-ab";
+const AB_ACTIVITY = "a1-serverside-xt";
 
 const Hero = ({customization}) => {
   const hero = customization && customization[AB_ACTIVITY];
