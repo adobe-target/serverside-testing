@@ -22,7 +22,6 @@ const Navigation = () => {
                 <li className="json-offer"><a href="/json-offer">JSON Offer</a></li>
                 <li className="third-party-id"><a href="/third-party-id">Third Party Id</a></li>
                 <li className="customer-attributes"><a href="/customer-attributes">Customer Attributes</a></li>
-                <li className="recommendations"><a href="/recommendations">Recommendations</a></li>
             </ul>
           </div>
         </div>
