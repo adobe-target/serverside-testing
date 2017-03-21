@@ -11,16 +11,12 @@ function render(component, payload, req, res) {
   const data = Object.assign({}, payload, visitorPayload);
   const promise = getCustomization(data, req, res);
 
-  console.log('Data sent to Target', data);
-
   promise.then(customization => {
     const html = renderPage(component, visitorState, customization);
 
     sendResponse(res, html);
   })
   .catch(error => {
-    console.log('Error', error);
-
     const html = renderPage(component, visitorState, null);
 
     sendResponse(res, html);

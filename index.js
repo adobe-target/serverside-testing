@@ -16,5 +16,5 @@ app.get("/mbox-parameters", mboxParameters);
 app.get("/profile-parameters", profileParameters);
 
 app.listen(PORT, function () {
-  console.log("Target Node Client React App is Running on Port", PORT);
+  console.log("Target React Sample App is running on port", PORT);
 });

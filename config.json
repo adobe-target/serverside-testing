@@ -3,7 +3,7 @@
     "client": "adobetargetmobile",
     "secure": true,
     "imsOrgId" : "B8A054D958807F770A495DD6@AdobeOrg",
-    "reportSuiteId": "<unknown>",
+    "reportSuiteId": "adobetargetmobileserverside",
     "trackingServer": "<unknown>",
     "trackingServerSecure": "<unknown>"
 }

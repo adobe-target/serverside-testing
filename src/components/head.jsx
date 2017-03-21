@@ -15,7 +15,8 @@ const Head = ({ visitorState }) => {
       <script src="js/VisitorAPI.js" />
 
       <script dangerouslySetInnerHTML={{__html: `
-         var visitor = Visitor.getInstance('${IMS_ORG_ID}', {serverState: ${visitorStateStr}});
+         var visitorState = ${visitorStateStr};
+         var visitor = Visitor.getInstance('${IMS_ORG_ID}', {serverState: visitorState});
       `}} />
 
       <script src="js/AppMeasurement.js" />

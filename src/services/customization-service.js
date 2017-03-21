@@ -2,24 +2,31 @@ const CONFIG = require('../../config.json');
 const CLIENT = CONFIG.client;
 const HOST = CONFIG.host;
 const SECURE = CONFIG.secure;
-const createTargetClient = require("@adobe/target-node-client");
-const targetClient = createTargetClient({
+const LOG_PREFIX = 'Target React App:';
+const createTargetNodeClient = require("@adobe/target-node-client");
+const targetNodeClient = createTargetNodeClient({
   client: CLIENT,
   host: HOST,
-  secure: SECURE
+  secure: SECURE,
+  timeout: 10000,
+  debug: true
 });
 
+function log(...params) {
+  console.log.apply(console, [].concat.apply([LOG_PREFIX], params));
+}
+
 function getCustomization(data, req, res) {
-  return targetClient.execute(data, req, res)
+  return targetNodeClient.execute(data, req, res)
     .then(response => {
-      console.log('Target request succeeded', response);
+      log('response', response);
 
       return {
         content: response.content
       };
     })
     .catch(error => {
-      console.log('Target request failed', error);
+      log('error', error);
 
       return null;
     });
