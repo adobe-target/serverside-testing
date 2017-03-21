@@ -19,8 +19,6 @@ const Navigation = () => {
                 <li className="xt"><a href="/xt">XT</a></li>
                 <li className="mbox-parameters"><a href="/mbox-parameters">Mbox Parameters</a></li>
                 <li className="profile-parameters"><a href="/profile-parameters">Profile Parameters</a></li>
-                <li className="json-offer"><a href="/json-offer">JSON Offer</a></li>
-                <li className="third-party-id"><a href="/third-party-id">Third Party Id</a></li>
             </ul>
           </div>
         </div>
