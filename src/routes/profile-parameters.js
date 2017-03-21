@@ -3,7 +3,7 @@ const render = require("../services/rendering-service");
 
 module.exports = (req, res) => {
   const payload = {
-    mbox: "a1-serverside-ab-profile-parameters",
+    mbox: "a1-serverside-profileparams",
     profileParameters : {
       "transformerType" : "autobot"
     }

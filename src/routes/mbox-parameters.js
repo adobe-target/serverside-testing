@@ -3,7 +3,7 @@ const render = require("../services/rendering-service");
 
 module.exports = (req, res) => {
   const payload = {
-    mbox: "a1-serverside-ab-mbox-parameters",
+    mbox: "a1-serverside-mboxparams",
     mboxParameters : {
       "currentCategory" : "shoes",
       "cartValue": 130
