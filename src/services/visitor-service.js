@@ -1,7 +1,7 @@
-const CONFIG = require('../../config.json');
+const IMS_ORG_ID = require('../../config.json').imsOrgId;
+
 const Cookies = require("cookies");
 const Visitor = require("@adobe-mcid/visitor-js-server");
-const IMS_ORG_ID = CONFIG.imsOrgId;
 
 function getVisitorData(mbox, req, res) {
   const visitor = new Visitor(IMS_ORG_ID);
@@ -13,6 +13,7 @@ function getVisitorData(mbox, req, res) {
   });
 
   const state = visitor.getState();
+
   return {payload, state};
 }
 

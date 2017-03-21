@@ -16,7 +16,7 @@ function getCustomization(data, req, res) {
 
       console.log('Target request succeeded', response);
 
-      result[data.mbox] = response.content;
+      result.content = response.content;
 
       return result;
     })

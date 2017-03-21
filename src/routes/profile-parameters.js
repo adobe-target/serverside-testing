@@ -3,11 +3,9 @@ const render = require("../services/rendering-service");
 
 module.exports = (req, res) => {
   const payload = {
-    mbox: "hero-banner",
-    tntId: "123456-a",
-    mboxParameters : {
-      "store" : "FR",
-      "browserWidth" : "600"
+    mbox: "a1-serverside-ab-profile-parameters",
+    profileParameters : {
+      "transformerType" : "autobot"
     }
   };
 

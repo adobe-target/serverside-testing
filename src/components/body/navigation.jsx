@@ -21,7 +21,6 @@ const Navigation = () => {
                 <li className="profile-parameters"><a href="/profile-parameters">Profile Parameters</a></li>
                 <li className="json-offer"><a href="/json-offer">JSON Offer</a></li>
                 <li className="third-party-id"><a href="/third-party-id">Third Party Id</a></li>
-                <li className="customer-attributes"><a href="/customer-attributes">Customer Attributes</a></li>
             </ul>
           </div>
         </div>
