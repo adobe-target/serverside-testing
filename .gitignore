@@ -3,4 +3,3 @@ npm-debug.log
 /*.env
 *.iml
 .idea
-node_modules

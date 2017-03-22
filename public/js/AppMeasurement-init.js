@@ -1,5 +1,5 @@
 //initialize AppMeasurement
-var s_account="adobetargetmobileserverside"
+var s_account="adobetargetmobilewesteros"
 var s=s_gi(s_account)
 
 /******** VISITOR ID SERVICE CONFIG - REQUIRES VisitorAPI.js ********/
