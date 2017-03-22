@@ -32,5 +32,5 @@ s.linkTrackEvents="None"
 /* WARNING: Changing any of the below variables will cause drastic
  changes to how your visitor data is collected.  Changes should only be
  made when instructed to do so by your account manager.*/
-//s.trackingServer="<unknown>"
-//s.trackingServerSecure="<unknown>"
+s.trackingServer="adobetargetmobile.sc.omtrdc.net"
+s.trackingServerSecure="adobetargetmobile.sc.omtrdc.net"

@@ -4,6 +4,6 @@
     "secure": true,
     "imsOrgId" : "B8A054D958807F770A495DD6@AdobeOrg",
     "reportSuiteId": "adobetargetmobileserverside",
-    "trackingServer": "<unknown>",
-    "trackingServerSecure": "<unknown>"
+    "trackingServer": "adobetargetmobile.sc.omtrdc.net",
+    "trackingServerSecure": "adobetargetmobile.sc.omtrdc.net"
 }

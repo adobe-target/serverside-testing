@@ -8,7 +8,11 @@ function render(component, payload, req, res) {
   const visitorData = getVisitorData(mbox, req, res);
   const visitorPayload = visitorData.payload;
   const visitorState = visitorData.state;
+  const mboxParams = Object.assign({}, payload.mboxParameters || {}, visitorPayload.mboxParameters || {});
+  const profileParams = Object.assign({}, payload.profileParameters || {}, visitorPayload.profileParameters || {});
   const data = Object.assign({}, payload, visitorPayload);
+  data.mboxParameters = mboxParams;
+  data.profileParameters = profileParams;
   const promise = getCustomization(data, req, res);
 
   promise.then(customization => {

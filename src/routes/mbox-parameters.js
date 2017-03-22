@@ -6,8 +6,7 @@ module.exports = (req, res) => {
     mbox: "a1-serverside-mboxparams",
     thirdPartyId : "customId-123",  
     mboxParameters : {
-      "currentCategory" : "shoes",
-      "cartValue": 130
+      cartValue: 130
     }
   };
 
