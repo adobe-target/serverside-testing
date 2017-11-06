@@ -1,1 +1,1 @@
-L4242 - please go to [WIKI](https://github.com/adobe-target/serverside-testing/wiki/A0.-Introduction)
+Please go to https://github.com/Adobe-Marketing-Cloud/target-node-client-samples for the latest server side reference implemenations using Adobe Target. 
